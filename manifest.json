@@ -1,0 +1,19 @@
+{
+  "name": "€/Pingo Doce",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Permite ordenar os itens por €/kg, €/L, €/unidade de forma a garantir que compra sempre o produto mais barato",
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "js": ["content.js"],
+    "run_at":"document_end",
+    "matches": ["*://mercadao.pt/store/pingo-doce/*","*://*.mercadao.pt/store/pingo-doce/*"]
+  }],
+  "browser_action": {
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
